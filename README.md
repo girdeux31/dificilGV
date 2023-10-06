@@ -1,7 +1,5 @@
  # dificilGV
 
----
-
 ## Characteristics
 
  - Program: dificilGV
@@ -26,15 +24,15 @@ Python 3.10 and the following third-party modules:
 
 For Unix you may need to install the following packages for pdftotext:
 
-```sudo apt-get install build-essential libpoppler-cpp-dev pkg-config python3-dev```
+``sudo apt-get install build-essential libpoppler-cpp-dev pkg-config python3-dev``
  
 Install modules with pip:
 
-```pip install -r requirements.txt```
+``pip install -r requirements.txt``
 
 ## Usage
 
-```python dificilGV.py /path/to/oferts.pdf [/path/to/final/results.pdf]
+``python dificilGV.py /path/to/oferts.pdf [/path/to/final/results.pdf]``
 
  - oferts.pdf: pdf file with place oferts
  - results.pdf: pdf file with final results (optional, if included more info is shown in summary)
@@ -43,7 +41,7 @@ Install modules with pip:
 
 ## Examples
 
-```python3 DificilCoberturaGV.py example/230929_pue_prov.pdf  example/230929_par.pdf```
+``python3 DificilCoberturaGV.py example/230929_pue_prov.pdf  example/230929_par.pdf``
 
 ## Candidate
 
