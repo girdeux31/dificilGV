@@ -39,9 +39,9 @@ Install modules with pip:
 
  Download both pdfs in https://ceice.gva.es/es/web/rrhh-educacion/resolucion1.
 
-## Examples
+## Example
 
-``python3 dificilGV.py example/230929_pue_prov.pdf example/230929_par.pdf``
+``python dificilGV.py example/230929_pue_prov.pdf example/230929_par.pdf``
 
 ## Additional parameters
 
