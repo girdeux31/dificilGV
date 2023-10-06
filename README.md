@@ -43,7 +43,7 @@ Install modules with pip:
 
 ``python3 dificilGV.py example/230929_pue_prov.pdf example/230929_par.pdf``
 
-## Candidate
+## Additional parameters
 
  Tune candidate parameters (city, name, codes, and provinces) in the script from line 14 to 17.
 
@@ -68,17 +68,17 @@ Install modules with pip:
  - School ID:: School ID according to GV
  - Hours: Hours of lectures
  - Other: Other information (type of substitution and requirements)
- - * Winner: Winner position
- - * You: Your position according to you name in line 15
- - * Total: Total number of participants for that place
- - * Groups: Candidates in group 1/group 2/group 3
+ - *Winner: Winner position
+ - *You: Your position according to you name in line 15
+ - *Total: Total number of participants for that place
+ - *Groups: Candidates in group 1/group 2/group 3
 
  (*) Columns are only included if results are supplied through a second input argument as a pdf.
 
 ## Bugs
 
  - Candidates in final result file whose first name is longer than 16 characters are skipped since
-   candidate entry (see pattern in 'final_candidate_pattern' is split in two lines and format mixed.
+   candidate entry (see pattern in ``final_candidate_pattern` is split in two lines and format mixed.
    
 ## License
 
