@@ -37,11 +37,11 @@ Install modules with pip:
  - oferts.pdf: pdf file with place oferts
  - results.pdf: pdf file with final results (optional, if included more info is shown in summary)
 
- Download both pdfs in \'https://ceice.gva.es/es/web/rrhh-educacion/resolucion1'.
+ Download both pdfs in https://ceice.gva.es/es/web/rrhh-educacion/resolucion1.
 
 ## Examples
 
-``python3 DificilCoberturaGV.py example/230929_pue_prov.pdf  example/230929_par.pdf``
+``python3 dificilGV.py example/230929_pue_prov.pdf example/230929_par.pdf``
 
 ## Candidate
 
@@ -68,17 +68,17 @@ Install modules with pip:
  - School ID:: School ID according to GV
  - Hours: Hours of lectures
  - Other: Other information (type of substitution and requirements)
- - *Winner: Winner position
- - *You: Your position according to you name in line 15
- - *Total: Total number of participants for that place
- - *Groups: Candidates in group 1/group 2/group 3
+ - * Winner: Winner position
+ - * You: Your position according to you name in line 15
+ - * Total: Total number of participants for that place
+ - * Groups: Candidates in group 1/group 2/group 3
 
- * Columns are only included if results are supplied through a second input argument as a pdf.
+ (*) Columns are only included if results are supplied through a second input argument as a pdf.
 
 ## Bugs
 
  - Candidates in final result file whose first name is longer than 16 characters are skipped since
-   candidate entry (see pattern in \'final_candidate_pattern\ is split in two lines and format mixed.
+   candidate entry (see pattern in 'final_candidate_pattern' is split in two lines and format mixed.
    
 ## License
 

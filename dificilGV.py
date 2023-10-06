@@ -63,6 +63,8 @@ def print_help():
     print('')
     print(' Download both pdfs in \'https://ceice.gva.es/es/web/rrhh-educacion/resolucion1\'')
     print('')
+    print(' Visit GitHub page at https://github.com/girdeux31/dificilGV for more info.')
+    print('')
 
 def pdf2str(pdf_file):
     """
