@@ -26,7 +26,7 @@ candidate['provinces'] = ['Alacant', 'Castelló', 'València']
 ### END OF USER OPTIONS
 
 debug = False
-special_char = ' \(\)A-ZÁÉÍÓÚÀÈÌÒÙÇÜ.-'
+special_chars = ' \(\)A-ZÁÉÍÓÚÀÈÌÒÙÇÜÑ1234567890\'.-'
 default_columns = ['code', 'subject', 'province', 'city', 'city_id', 'distance',
                     'school_name', 'school_id', 'hours', 'other']
 extra_columns = ['winner', 'you', 'total', 'groups']
