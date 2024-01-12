@@ -26,24 +26,25 @@ candidate['provinces'] = ['Alacant', 'Castelló', 'València']
 ### END OF USER OPTIONS
 
 debug = False
-special_chars = ' \(\)A-ZÁÉÍÓÚÀÈÌÒÙÇÜÑ1234567890\'.-'
+special_alphanumeric_chars = ' \(\)A-ZÁÉÍÓÚÀÈÌÒÙÇÜÑ1234567890\'.-'
+special_alpha_chars = ' \(\)A-ZÁÉÍÓÚÀÈÌÒÙÇÜÑ\'.-'
 default_columns = ['code', 'subject', 'province', 'city', 'city_id', 'distance',
                     'school_name', 'school_id', 'hours', 'other']
 extra_columns = ['winner', 'you', 'total', 'groups']
 
-p = '^ESPECIALIDAD/ESPECIALITAT: (?P<code>[0-9A-Z]{3}) (?P<subject>[' + special_char + ']+)'
+p = '^ESPECIALIDAD/ESPECIALITAT: (?P<code>[0-9A-Z]{3}) (?P<subject>[' + special_alpha_chars + ']+)'
 ofert_code_pattern = re.compile(p, re.MULTILINE | re.ASCII)
 
 p = '^PROVÍNCIA/PROVINCIA: (?P<province>(Alacant)|(València)|(Castelló))'
 ofert_province_pattern = re.compile(p, re.MULTILINE | re.ASCII)
 
-p = '^(?P<city>[' + special_char + ']+) - (?P<city_id>\d+) - (?P<school_name>[' + special_char + ']+) +(?P<school_id>\d+) (?P<hours>\d+) +(?P<itinerant>[SINO]+) +(?P<other>.*)'
+p = '^(?P<city>[' + special_alpha_chars + ']+) - (?P<city_id>\d+) - (?P<school_name>[' + special_alphanumeric_chars + ']+) +(?P<school_id>\d+) (?P<hours>\d+) +(?P<itinerant>[SINO]+) +(?P<other>.*)'
 ofert_school_pattern = re.compile(p, re.MULTILINE | re.ASCII)
 
-p = '^(?P<position>\d+) +(?P<assigned>-->)? +(?P<name>[' + special_char + ']+) *(?P<date>[0-9/]+) (?P<time>[0-9:]+) +(?P<number>[0-9A-Z/]+) +X? +(?P<ranking>\d+) +[SN]? +[SN] +(?P<group>\d) *(?P<place_id>\d+)?'
+p = '^(?P<position>\d+) +(?P<assigned>-->)? +(?P<name>[' + special_alpha_chars + ']+) *(?P<date>[0-9/]+) (?P<time>[0-9:]+) +(?P<number>[0-9A-Z/]+) +X? +(?P<ranking>\d+) +[SN]? +[SN] +(?P<group>\d) *(?P<place_id>\d+)?'
 final_candidate_pattern = re.compile(p, re.MULTILINE | re.ASCII)
 
-p = '^ +(?P<code>[0-9A-Z]{3}) (?P<subject>[' + special_char + ']+)'
+p = '^ +(?P<code>[0-9A-Z]{3}) (?P<subject>[' + special_alpha_chars + ']+)'
 final_code_pattern = re.compile(p, re.MULTILINE | re.ASCII)
 
 p = '^ +PUESTO : +(?P<school_id>\d+) +(?P<city_id>\d+)'
