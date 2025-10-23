@@ -37,7 +37,7 @@ Install modules with pip:
  - oferts.pdf: pdf file with place oferts
  - results.pdf: pdf file with final results (optional, if included more info is shown in summary)
 
- Download both pdfs in https://ceice.gva.es/es/web/rrhh-educacion/resolucion1.
+Download pdfs in https://ceice.gva.es/es/web/rrhh-educacion/convocatoria-y-peticion-telematica6 and https://ceice.gva.es/es/web/rrhh-educacion/resolucion1\
 
 ## Example
 
@@ -50,7 +50,7 @@ Install modules with pip:
  - City: your city to get distance from, check for typos
  - Name: your name as surnames and then first name, just as in the pdf, check for typos, to get your position (only if pdf with final results is included)
  - Codes: list of codes to include in summary, check codes = f(your degree) in
-   https://ceice.gva.es/es/web/rrhh-educacion/convocatoria-y-peticion-telematica6+SECUNDARI_ESPECIALIDADES+Y+T%C3%8DTULOS.pdf
+   https://ceice.gva.es/documents/162909733/385996069/2024-25_%282%29_PROF.+DE+ENSE%C3%91ANZA+SECUNDARI_ESPECIALIDADES+Y+T%C3%8DTULOS.pdf
  - Provinces: list of provinces to include in summary, check for typos
 
 ## Output
@@ -77,7 +77,7 @@ Install modules with pip:
 ## Bugs
 
  - Candidates in final result file whose first name is longer than 16 characters are skipped since
-   candidate entry (see pattern in `final_candidate_pattern` is split in two lines and format mixed.
+   candidate entry (see pattern in `final_candidate_pattern` is split in two lines and format is mixed.
    
 ## License
 
