@@ -3,9 +3,9 @@
 ## Characteristics
 
  - Program: dificilGV
- - Version: 1.0
+ - Version: 1.1
  - Author: Carles Mesado
- - Date: 06/10/2023
+ - Date: 23/10/2025
  - Size: ~ 5.4 MiB
  
 ## Purpose
@@ -17,7 +17,7 @@
 Python 3.10 and the following third-party modules:
 
  - pandas>=2.0.0
- - pdftotext==2.1.6
+ - pdftotext==2.1.6 (make sure you are NOT using 2.2.x or newer)
  - geopy==2.4.0
 
 ## Initial configuration
@@ -48,10 +48,9 @@ Install modules with pip:
  Tune candidate parameters (city, name, codes, and provinces) in the script from line 14 to 17.
 
  - City: your city to get distance from, check for typos
- - Name: your name as surnames and then first name, just as in the pdf, check for typos, to get your position
-   (only if pdf with final results is included)
+ - Name: your name as surnames and then first name, just as in the pdf, check for typos, to get your position (only if pdf with final results is included)
  - Codes: list of codes to include in summary, check codes = f(your degree) in
-   https://ceice.gva.es/documents/162909733/374747137/2023-24_%282%29_PROF.+DE+ENSE%C3%91ANZA+SECUNDARI_ESPECIALIDADES+Y+T%C3%8DTULOS.pdf
+   https://ceice.gva.es/es/web/rrhh-educacion/convocatoria-y-peticion-telematica6+SECUNDARI_ESPECIALIDADES+Y+T%C3%8DTULOS.pdf
  - Provinces: list of provinces to include in summary, check for typos
 
 ## Output
@@ -78,7 +77,7 @@ Install modules with pip:
 ## Bugs
 
  - Candidates in final result file whose first name is longer than 16 characters are skipped since
-   candidate entry (see pattern in ``final_candidate_pattern` is split in two lines and format mixed.
+   candidate entry (see pattern in `final_candidate_pattern` is split in two lines and format mixed.
    
 ## License
 
