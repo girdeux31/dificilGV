@@ -177,6 +177,7 @@ def parse_final_pdf(file: Path, df: pd.DataFrame):
     idx, last_idx = None, None
     text = pdf2str(file)
     lines = text.split('\n')
+    df['groups'] = df['groups'].astype(str)
 
     # check that this is the pdf
     if not lines[0].strip().startswith('PARTICIPANTS I LLOC'):
@@ -221,6 +222,7 @@ def parse_final_pdf(file: Path, df: pd.DataFrame):
 
         if idx and candidate_match:
                 position = candidate_match['position'].strip()
+                position = int(position) if position.isdigit() else position
                 assigned = candidate_match['assigned']
                 name = candidate_match['name'].strip()
                 # date = candidate_match['date'].strip()
@@ -231,16 +233,16 @@ def parse_final_pdf(file: Path, df: pd.DataFrame):
                 # place_id = candidate_match['place_id']
 
                 if assigned:
-                    df['winner'].loc[idx] = position
+                    df.loc[idx, 'winner'] = position
 
                 if name.replace(' ', '') == CANDIDATE['name'].replace(' ', '').upper():
-                    df['you'].loc[idx] = position
+                    df.loc[idx, 'you'] = position
 
                 if int(group) < 4:
                     groups[group] += 1
                 
-                df['total'].loc[idx] = position
-                df['groups'].loc[idx]= f'{groups["1"]}/{groups["2"]}/{groups["3"]}'
+                df.loc[idx, 'total'] = position
+                df.loc[idx, 'groups'] = f'{groups["1"]}/{groups["2"]}/{groups["3"]}'
 
     return df
     
@@ -249,7 +251,7 @@ if __name__ == '__main__':
     
     if DEBUG is True:
         pdf_offert_file = Path(r'251024/251024_pue_prov.pdf')
-        pdf_final_file = None  # Path(r'251024/251024_par.pdf')
+        pdf_final_file = Path(r'251024/251024_par.pdf')
 
     else:
         if len(sys.argv) not in [2, 3]:

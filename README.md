@@ -37,7 +37,7 @@ Install modules with pip:
  - oferts.pdf: pdf file with place oferts
  - results.pdf: pdf file with final results (optional, if included more info is shown in summary)
 
-Download pdfs in https://ceice.gva.es/es/web/rrhh-educacion/convocatoria-y-peticion-telematica6 and https://ceice.gva.es/es/web/rrhh-educacion/resolucion1\
+Download pdfs in https://ceice.gva.es/es/web/rrhh-educacion/convocatoria-y-peticion-telematica6 and https://ceice.gva.es/es/web/rrhh-educacion/resolucion1
 
 ## Example
 
@@ -77,7 +77,7 @@ Download pdfs in https://ceice.gva.es/es/web/rrhh-educacion/convocatoria-y-petic
 ## Bugs
 
  - Candidates in final result file whose first name is longer than 16 characters are skipped since
-   candidate entry (see pattern in `final_candidate_pattern` is split in two lines and format is mixed.
+   candidate entry (see pattern in `final_candidate_pattern`) is split in two lines and format is mixed.
    
 ## License
 
